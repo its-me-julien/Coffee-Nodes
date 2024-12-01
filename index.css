@@ -11,7 +11,7 @@
     --text-secondary: rgba(255, 255, 255, 0.9);
     --text-muted: rgba(255, 255, 255, 0.7);
     --bg-overlay: rgba(0, 0, 0, 0.1);
-    --bg-card: rgba(0, 31, 68, 0.5);
+    --bg-card: rgb(0 0 0 / 30%);
 }
 
 /* Base styles */
