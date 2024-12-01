@@ -18,7 +18,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://raw.githubusercontent.com/its-me-julien/coffee_earth_nodes/refs/heads/main/assets/coffee.png") center center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1491956175078-460aea0914ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1550&q=80") center center;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -84,7 +84,7 @@ body {
 #menu {
     width: 100%;
     text-align: center;
-    margin: 6vh 0;
+    margin: 2rem 0;
     display: none;
 }
 
@@ -168,6 +168,32 @@ body {
 #work:hover, #about:hover {
     background: var(--gradient-middle);
     cursor: pointer;
+}
+
+/* Social icons */
+#middle table {
+    width: auto;
+    margin: 2rem auto;
+}
+
+#middle table tr td {
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.social {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+    margin: 0 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social:hover {
+    cursor: pointer;
+    color: var(--gradient-middle);
 }
 
 /* Content containers */
@@ -369,5 +395,9 @@ body {
     
     .node-card .node-name {
         font-size: 0.75rem;
+    }
+
+    .social {
+        font-size: 1.25rem;
     }
 }
