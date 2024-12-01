@@ -27,7 +27,17 @@ body {
     font-weight: 300;
     color: var(--text-primary);
 }
-
+.status-widget-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .status-widget-container iframe {
+    margin: 0 auto;
+    background: transparent;
+  }
 /* Loading screen */
 #loading {
     width: 100vw;
