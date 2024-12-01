@@ -260,6 +260,60 @@ body {
     height: 100vh;
 }
 
+/* WMTx styling */
+.wmtx {
+    font-family: 'Rubik One', sans-serif;
+    color: var(--text-primary);
+}
+
+/* Staking section */
+.staking-section {
+    margin-top: 3rem;
+}
+
+.staking-section h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* Node grid layout */
+.node-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Node cards */
+.node-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.node-card:hover {
+    transform: translateY(-2px);
+}
+
+.node-card h4 {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 1.25rem;
+    color: var(--gradient-middle);
+    margin: 0 0 0.5rem 0;
+}
+
+.node-card .node-name {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
@@ -325,5 +379,15 @@ body {
     
     .container h1 {
         font-size: 2.5rem;
+    }
+
+    .node-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5rem;
+    }
+    
+    .staking-section h3 {
+        font-size: 1.125rem;
+        padding: 0 1rem;
     }
 }
