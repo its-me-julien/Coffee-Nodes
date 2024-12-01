@@ -106,13 +106,14 @@ body {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: fixed;
     top: 0;
     text-align: center;
     z-index: 1;
     color: var(--text-primary);
-    padding-bottom: 10vh;
+    padding: 5vh 0;
+    overflow-y: auto;
 }
 
 #middle h1 {
@@ -129,10 +130,11 @@ body {
     font-size: 1.5rem;
     color: var(--text-secondary);
     margin-bottom: 2rem;
+    padding: 0 2rem;
 }
 
 /* Navigation buttons */
-#projects, #about {
+#work, #about {
     width: 10vw;
     height: 10vw;
     text-align: center;
@@ -149,9 +151,10 @@ body {
     text-decoration: none;
 }
 
-#projects {
-    top: 0;
-    right: 45vw;
+#work {
+    transform: rotate(90deg);
+    right: 0;
+    bottom: 40vh;
     border-radius: 0 0 100px 100px;
 }
 
@@ -162,33 +165,9 @@ body {
     border-radius: 0 0 100px 100px;
 }
 
-#projects:hover, #about:hover {
+#work:hover, #about:hover {
     background: var(--gradient-middle);
     cursor: pointer;
-}
-
-/* Social icons */
-#middle table {
-    width: 30%;
-    margin: 6vh auto;
-}
-
-#middle table tr td {
-    text-align: center;
-}
-
-.social {
-    color: var(--text-secondary);
-    font-size: 1.375rem;
-    border-radius: 50%;
-    transition: 0.4s ease-in-out;
-    margin: 0 8px;
-    text-align: center;
-}
-
-.social:hover {
-    cursor: pointer;
-    color: var(--gradient-middle);
 }
 
 /* Content containers */
@@ -234,30 +213,7 @@ body {
     font-size: 1.125rem;
     line-height: 1.6;
     color: var(--text-secondary);
-}
-
-/* Footer */
-#footer {
-    color: var(--text-muted);
-    width: 92vw;
-    padding: 5vh 4vw;
-    text-align: right;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    font-size: 1rem;
-}
-
-#footer a {
-    color: var(--gradient-middle);
-    text-decoration: none;
-}
-
-/* Particles */
-#particles-js {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    margin-bottom: 1.5rem;
 }
 
 /* WMTx styling */
@@ -268,16 +224,9 @@ body {
 
 /* Staking section */
 .staking-section {
-    margin-top: 2rem;
-    max-height: 60vh;
-    overflow-y: auto;
-}
-
-.staking-section h3 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
 }
 
 /* Node grid layout */
@@ -285,9 +234,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
 /* Node cards */
@@ -295,7 +242,7 @@ body {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -306,16 +253,23 @@ body {
 
 .node-card h4 {
     font-family: 'Rubik One', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     color: var(--gradient-middle);
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.25rem 0;
 }
 
 .node-card .node-name {
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     color: var(--text-secondary);
     margin: 0;
+}
+
+/* Particles */
+#particles-js {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* Scrollbar */
@@ -346,30 +300,29 @@ body {
 @media (max-width: 1024px) {
     .node-grid {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 800px;
+    }
+    
+    #middle h1 {
+        font-size: 3.5rem;
     }
 }
 
 @media (max-width: 800px) {
-    #projects, #about {
+    #work, #about {
         display: none;
-    }
-    
-    #footer {
-        text-align: center;
     }
     
     #middle {
         width: 90vw;
-        padding: 0 5vw;
-    }
-    
-    #middle table {
-        width: 80%;
+        padding: 5vh 5vw;
     }
     
     #middle h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    #middle h2 {
+        font-size: 1.25rem;
     }
     
     #menu {
@@ -395,13 +348,26 @@ body {
 
 @media (max-width: 640px) {
     .node-grid {
-        grid-template-columns: 1fr;
-        padding: 0.5rem;
-        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    .staking-section h3 {
+    #middle h1 {
+        font-size: 2rem;
+    }
+    
+    #middle h2 {
         font-size: 1.125rem;
-        padding: 0 1rem;
+    }
+    
+    .node-card {
+        padding: 0.5rem;
+    }
+    
+    .node-card h4 {
+        font-size: 1rem;
+    }
+    
+    .node-card .node-name {
+        font-size: 0.75rem;
     }
 }
