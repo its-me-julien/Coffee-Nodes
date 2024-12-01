@@ -174,26 +174,31 @@ body {
 #middle table {
     width: auto;
     margin: 2rem auto;
+    border-collapse: collapse;
 }
 
 #middle table tr td {
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 
 .social {
     color: var(--text-secondary);
     font-size: 1.5rem;
-    border-radius: 50%;
     transition: 0.4s ease-in-out;
-    margin: 0 8px;
     text-align: center;
     text-decoration: none;
+    display: inline-block; /* Changed from block to inline-block */
 }
 
 .social:hover {
     cursor: pointer;
     color: var(--gradient-middle);
+}
+
+/* Remove default link color */
+.social i {
+    color: inherit; /* Ensures icon inherits the color from parent */
 }
 
 /* Content containers */
