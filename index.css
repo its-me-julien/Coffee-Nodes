@@ -268,7 +268,9 @@ body {
 
 /* Staking section */
 .staking-section {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .staking-section h3 {
@@ -281,9 +283,11 @@ body {
 /* Node grid layout */
 .node-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Node cards */
@@ -339,6 +343,13 @@ body {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+    .node-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+}
+
 @media (max-width: 800px) {
     #projects, #about {
         display: none;
@@ -380,10 +391,13 @@ body {
     .container h1 {
         font-size: 2.5rem;
     }
+}
 
+@media (max-width: 640px) {
     .node-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         padding: 0.5rem;
+        max-width: 400px;
     }
     
     .staking-section h3 {
