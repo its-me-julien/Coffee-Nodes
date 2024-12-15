@@ -18,10 +18,11 @@
 /* Node Location Styling */
 .node-location {
     font-family: 'Rubik', sans-serif;
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    margin-top: 0.25rem;
-  }
+  font-size: 0.875rem; /* Smaller font size for location */
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
   
   /* Updated Hover Effect */
   .node-card:hover {
@@ -328,10 +329,11 @@ body {
 }
 
 .node-card .node-name {
-    font-family: 'Rubik', sans-serif;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem; /* Larger font size for the pool name */
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Particles */
@@ -434,10 +436,6 @@ body {
     
     .node-card h4 {
         font-size: 1rem;
-    }
-    
-    .node-card .node-name {
-        font-size: 0.75rem;
     }
 
     .social {
