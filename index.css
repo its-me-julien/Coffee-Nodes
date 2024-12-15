@@ -15,21 +15,6 @@
 }
 
 
-/* Node Location Styling */
-.node-location {
-    font-family: 'Rubik', sans-serif;
-  font-size: 0.875rem; /* Smaller font size for location */
-  color: var(--text-muted);
-  margin-top: 0.25rem;
-  font-weight: 400;
-}
-  
-  /* Updated Hover Effect */
-  .node-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
 
 /* Base styles */
 body {
@@ -343,6 +328,12 @@ body {
     height: 100vh;
 }
 
+  /* Updated Hover Effect */
+  .node-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     width: 5px;
@@ -365,6 +356,15 @@ body {
 ::selection {
     color: var(--text-primary);
     background: var(--gradient-middle);
+}
+
+/* Node Location Styling */
+.node-location {
+    font-family: 'Rubik', sans-serif;
+  font-size: 0.875rem; /* Smaller font size for location */
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-weight: 400;
 }
 
 /* Responsive design */
