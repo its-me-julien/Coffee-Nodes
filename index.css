@@ -15,19 +15,7 @@
 }
 
 
-/* Node Location Styling */
-.node-location {
-    font-family: 'Rubik', sans-serif;
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    margin-top: 0.25rem;
-  }
-  
-  /* Updated Hover Effect */
-  .node-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  }
+
 
 
 /* Base styles */
@@ -46,12 +34,25 @@ body {
 
 /* Updated Node Card Styling */
 .node-card img {
-    width: 60%;
+    width: 36%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 0.75rem;
 }
 
+/* Node Location Styling */
+.node-location {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+  
+  /* Updated Hover Effect */
+  .node-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
 
 
 
