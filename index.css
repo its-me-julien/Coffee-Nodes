@@ -42,6 +42,20 @@ body {
     margin-bottom: 0.75rem;
 }
 
+.node-card:hover h4 {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.3s ease-in-out;
+}
+
+.node-card:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
 /* Node Location Styling */
 .node-location {
     font-family: 'Rubik', sans-serif;
