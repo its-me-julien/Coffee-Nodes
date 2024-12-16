@@ -18,11 +18,11 @@
 
 
 
-/* Fixed gradient background with subtle animation */
+/* Gradient background starting with black transitioning to purple */
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, rgba(60, 30, 150, 0.8), rgba(20, 40, 80, 0.9), rgba(0, 0, 0, 1), rgba(90, 40, 120, 0.8));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 1), rgba(20, 20, 40, 0.9), rgba(60, 30, 150, 0.8), rgba(90, 40, 120, 0.8));
     background-size: 300% 300%;
     animation: background-drift 80s ease-in-out infinite; /* Subtle, slow animation */
     width: 100vw;
@@ -54,7 +54,7 @@ body {
     }
 }
 
-/* Overlay for consistent darkness */
+/* Overlay for consistent depth */
 body::before {
     content: "";
     position: fixed;
@@ -62,7 +62,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for moodiness */
     z-index: -1;
 }
 
