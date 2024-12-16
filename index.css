@@ -18,33 +18,44 @@
 
 
 
-/* Improved dark, blurred gradient background with slower animation */
+/* Subtle, dynamic gradient background with multi-angle animation */
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, rgba(40, 10, 100, 0.9), rgba(0, 15, 40, 0.9), rgba(120, 40, 15, 0.8), rgba(100, 20, 40, 0.8));
-    background-size: 200% 200%;
-    animation: gradient-shift 30s ease infinite; /* Slower animation */
+    background: linear-gradient(135deg, rgba(30, 10, 90, 0.9), rgba(10, 15, 30, 0.9), rgba(100, 30, 15, 0.8), rgba(80, 20, 40, 0.8));
+    background-size: 300% 300%;
+    animation: gradient-drift 40s ease-in-out infinite; /* Slower, multi-angle animation */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     color: var(--text-primary);
-    backdrop-filter: blur(16px); /* Significantly increased blur */
-    -webkit-backdrop-filter: blur(16px); /* Safari compatibility */
+    backdrop-filter: blur(18px); /* Increased blur for dreamier effect */
+    -webkit-backdrop-filter: blur(18px); /* Safari compatibility */
 }
 
-/* Slower, more subtle gradient animation */
-@keyframes gradient-shift {
+/* Multi-directional gradient animation */
+@keyframes gradient-drift {
     0% {
         background-position: 0% 50%;
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        background-position: 50% 0%;
+        transform: scale(1.02) rotate(2deg);
     }
     50% {
         background-position: 100% 50%;
+        transform: scale(1.03) rotate(-1deg);
+    }
+    75% {
+        background-position: 50% 100%;
+        transform: scale(1.01) rotate(1deg);
     }
     100% {
         background-position: 0% 50%;
+        transform: scale(1) rotate(0deg);
     }
 }
 
@@ -56,7 +67,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Darker, semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.65); /* Slightly darker overlay for richness */
     z-index: -1;
 }
 
