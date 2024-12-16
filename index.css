@@ -22,7 +22,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, #5A2FBA, #001f44, #F6642D, #D42E58);
+    background: linear-gradient(135deg, rgba(50, 15, 125, 0.9), rgba(0, 20, 60, 0.9), rgba(175, 60, 20, 0.8), rgba(130, 25, 50, 0.8));
     background-size: 200% 200%;
     animation: gradient-shift 10s ease infinite;
     width: 100vw;
@@ -31,7 +31,8 @@ body {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     color: var(--text-primary);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px); /* Stronger blur for a smoother look */
+    -webkit-backdrop-filter: blur(8px); /* For Safari compatibility */
 }
 
 /* Gradient animation */
@@ -45,6 +46,18 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+/* Optional overlay for extra darkness */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: -1;
 }
 
 /* Updated Node Card Styling */
