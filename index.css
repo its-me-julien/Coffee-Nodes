@@ -22,16 +22,29 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url("https://github.com/its-me-julien/coffee_earth_nodes/blob/main/assets/bean3-min.jpg?raw=true") center center;
-    background-size: cover;
+    background: linear-gradient(135deg, #5A2FBA, #001f44, #F6642D, #D42E58);
+    background-size: 200% 200%;
+    animation: gradient-shift 10s ease infinite;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     color: var(--text-primary);
-    backdrop-filter: blur(3px); /* Adds a blur effect */
+    backdrop-filter: blur(3px);
+}
+
+/* Gradient animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Updated Node Card Styling */
