@@ -344,13 +344,11 @@ body::before {
 /* Staking Benefits Section */
 .staking-benefits {
     margin: 2rem auto;
-    padding: 1.5rem;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.2); /* Subtle card background */
+    padding: 1.5rem 1rem;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.25); /* Soft background for subtle contrast */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .staking-benefits ul {
@@ -359,35 +357,50 @@ body::before {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 2rem; /* Adds space between items */
-    justify-content: space-between; /* Distributes items evenly */
+    gap: 1rem 2rem; /* Uniform spacing between items */
+    justify-content: space-between;
 }
 
 .staking-benefits li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    flex: 1 1 calc(50% - 2rem); /* Two items per row with spacing */
-    font-size: 1.125rem;
-    color: var(--text-primary);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem; /* Smaller font size for better balance */
+    line-height: 1.5;
+    color: var(--text-secondary);
+    white-space: nowrap; /* Prevents text from breaking onto multiple lines */
+    flex: 1 1 calc(33.333% - 2rem); /* Three items per row, consistent width */
 }
 
 .staking-benefits i {
-    font-size: 1.5rem;
+    font-size: 1.25rem; /* Smaller icons for visual balance */
     background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     flex-shrink: 0;
 }
 
-.staking-benefits span {
-    font-family: 'Rubik One', sans-serif;
-    color: var(--text-secondary);
-    transition: color 0.3s ease-in-out;
+.staking-benefits li:hover {
+    color: var(--gradient-start); /* Hover effect for the entire item */
 }
 
-.staking-benefits li:hover span {
-    color: var(--gradient-start); /* Subtle hover effect */
+.staking-benefits li:hover i {
+    color: var(--gradient-end); /* Adds subtle color variation on hover */
+}
+
+/* Title Styling in Staking Benefits */
+.staking-benefits h3 {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--gradient-middle);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
