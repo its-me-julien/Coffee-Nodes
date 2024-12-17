@@ -339,6 +339,56 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
+
+
+/* Staking Benefits Section */
+.staking-benefits {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Rubik', sans-serif;
+}
+
+.staking-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.staking-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.staking-benefits i {
+    font-size: 1.5rem;
+    color: var(--gradient-start);
+    flex-shrink: 0;
+}
+
+.staking-benefits strong {
+    font-family: 'Rubik One', sans-serif;
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.staking-benefits span {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+
+
 /* WMTx styling */
 .wmtx {
     font-family: 'Rubik One', sans-serif;
@@ -381,6 +431,9 @@ body::before {
     text-align: center;
     transition: background 0.3s ease, transform 0.3s ease;
 }
+
+
+
 
 /* Special Border for the New Node */
 .special-border {
