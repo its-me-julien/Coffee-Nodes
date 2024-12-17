@@ -402,6 +402,8 @@ body::before {
     box-shadow: 0 0 0 2px;
     border-image: linear-gradient(to right, #F6642D, #D42E58, #5A2FBA);
     border-image-slice: 1;
+    filter: brightness(0.8); /* Darkens the card by reducing brightness */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
 .node-card h4 {
