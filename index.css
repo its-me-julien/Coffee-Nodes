@@ -394,6 +394,16 @@ body::before {
     transition: background 0.3s ease-in-out;
 }
 
+.node-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 0 2px;
+    border-image: linear-gradient(to right, #F6642D, #D42E58, #5A2FBA);
+    border-image-slice: 1;
+}
+
 .node-card h4 {
     font-family: 'Rubik One', sans-serif;
     font-size: 1.125rem;
