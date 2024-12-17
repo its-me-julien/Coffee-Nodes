@@ -564,6 +564,13 @@ body::before {
     #middle h2 {
         font-size: 1.125rem;
     }
+    .staking-benefits h3 {
+        font-size: 1.25rem; /* Adjust to balance with H2 */
+    }
+
+    .staking-benefits li {
+        font-size: 1rem; /* Reduced size for better hierarchy */
+    }
     
     .node-card {
         padding: 0.5rem;
