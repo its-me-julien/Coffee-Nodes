@@ -344,64 +344,47 @@ body::before {
 /* Staking Benefits Section */
 .staking-benefits {
     margin: 2rem auto;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
     max-width: 700px;
-    background: rgba(0, 0, 0, 0.25); /* Soft background for subtle contrast */
+    background: rgba(0, 0, 0, 0.2); /* Soft, subtle background */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Title Styling: H3 Consistent with Other Titles */
+.staking-benefits h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem; /* Consistent with other section titles */
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Single Column List */
 .staking-benefits ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem; /* Uniform spacing between items */
-    justify-content: space-between;
 }
 
 .staking-benefits li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    margin-bottom: 1rem;
     font-family: 'Rubik', sans-serif;
-    font-size: 1rem; /* Smaller font size for better balance */
-    line-height: 1.5;
-    color: var(--text-secondary);
-    white-space: nowrap; /* Prevents text from breaking onto multiple lines */
-    flex: 1 1 calc(33.333% - 2rem); /* Three items per row, consistent width */
+    font-size: 1.125rem; /* Clean and readable size */
+    color: var(--text-primary);
 }
 
 .staking-benefits i {
-    font-size: 1.25rem; /* Smaller icons for visual balance */
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.25rem;
+    color: var(--gradient-start); /* Icon color consistent with theme */
     flex-shrink: 0;
 }
 
-.staking-benefits li:hover {
-    color: var(--gradient-start); /* Hover effect for the entire item */
-}
-
-.staking-benefits li:hover i {
-    color: var(--gradient-end); /* Adds subtle color variation on hover */
-}
-
-/* Title Styling in Staking Benefits */
-.staking-benefits h3 {
-    font-family: 'Rubik One', sans-serif;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: var(--gradient-middle);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
 
 /* WMTx styling */
